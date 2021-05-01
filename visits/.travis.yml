@@ -5,9 +5,9 @@ services:
 
 
 before_install:
-  - docker build -t 22222286s/docker-act -f Dockerfile .
+  - docker build -t 22222286s/docker-act -f Dockerfile.dev .
 
 script:
-  - docker run 22222286s/docker-act npm run test -- --coverage
+  - docker run -e CI=true 22222286s/docker-act npm run test
 
 
