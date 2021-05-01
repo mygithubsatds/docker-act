@@ -1,4 +1,4 @@
-language: generic
+
 sudo: required
 services:
   - docker
@@ -8,6 +8,6 @@ before_install:
   - docker build -t 22222286s/docker-act -f Dockerfile .
 
 script:
-  - docker run  -e CI=true 22222286s/docker-act npm run test -- --coverage
+  - docker run 22222286s/docker-act npm run test -- --coverage
 
 
